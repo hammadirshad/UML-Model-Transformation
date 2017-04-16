@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Model xmi:id="_RArIShO-EeaaXfR7cIumqA" name="RandL">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_RArISxO-EeaaXfR7cIumqA" name="RandLColor">
+      <ownedLiteral xmi:id="_RArITBO-EeaaXfR7cIumqA" name="silver"/>
+      <ownedLiteral xmi:id="_RArITRO-EeaaXfR7cIumqA" name="gold"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArIThO-EeaaXfR7cIumqA" name="ServiceLevel">
+      <ownedAttribute xmi:id="_RArITxO-EeaaXfR7cIumqA" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArIUBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArIURO-EeaaXfR7cIumqA" name="program" type="_RArIWRO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV-xO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArIUhO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArIUxO-EeaaXfR7cIumqA" name="Membership" type="_RArvjxO-EeaaXfR7cIumqA" association="_RArvmBO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArIVBO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArIVRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArIVhO-EeaaXfR7cIumqA" name="availableServices" type="_RArvHxO-EeaaXfR7cIumqA" association="_RAsV-RO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArIVxO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArIWBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArIWRO-EeaaXfR7cIumqA" name="LoyaltyProgram">
+      <ownedAttribute xmi:id="_RArIWhO-EeaaXfR7cIumqA" name="participants" type="_RArvuxO-EeaaXfR7cIumqA" isOrdered="true" association="_RArv3BO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArIWxO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArIXBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArIXRO-EeaaXfR7cIumqA" name="partners" type="_RArvGBO-EeaaXfR7cIumqA" association="_RAsV-hO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArIXhO-EeaaXfR7cIumqA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArIXxO-EeaaXfR7cIumqA" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru4BO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RAru4RO-EeaaXfR7cIumqA" name="levels" type="_RArIThO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV-xO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RAru4hO-EeaaXfR7cIumqA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RAru4xO-EeaaXfR7cIumqA" name="memberships" type="_RArvjxO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV_BO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RAru5BO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru5RO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RAru5hO-EeaaXfR7cIumqA" name="selectPopularPartners" visibility="public">
+        <ownedParameter xmi:id="_RAru5xO-EeaaXfR7cIumqA" type="_RArvGBO-EeaaXfR7cIumqA" direction="return">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RAru6BO-EeaaXfR7cIumqA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru6RO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru6hO-EeaaXfR7cIumqA" name="d" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru6xO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RAru7BO-EeaaXfR7cIumqA" name="addService" visibility="public">
+        <ownedParameter xmi:id="_RAru7RO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru7hO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru7xO-EeaaXfR7cIumqA" name="s" type="_RArvHxO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru8BO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru8RO-EeaaXfR7cIumqA" name="l" type="_RArIThO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru8hO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru8xO-EeaaXfR7cIumqA" name="p" type="_RArvGBO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru9BO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RAru9RO-EeaaXfR7cIumqA" name="getServices" visibility="public">
+        <ownedParameter xmi:id="_RAru9hO-EeaaXfR7cIumqA" type="_RArvHxO-EeaaXfR7cIumqA" direction="return">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RAru9xO-EeaaXfR7cIumqA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru-BO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru-RO-EeaaXfR7cIumqA" name="pp" type="_RArvGBO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru-hO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RAru-xO-EeaaXfR7cIumqA" name="enrollAndCreateCustomer" visibility="public">
+        <ownedParameter xmi:id="_RAru_BO-EeaaXfR7cIumqA" type="_RArvuxO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru_RO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RAru_hO-EeaaXfR7cIumqA" name="n" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RAru_xO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvABO-EeaaXfR7cIumqA" name="d" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvARO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvAhO-EeaaXfR7cIumqA" name="enroll" visibility="public">
+        <ownedParameter xmi:id="_RArvAxO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvBBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvBRO-EeaaXfR7cIumqA" name="c" type="_RArvuxO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvBhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvBxO-EeaaXfR7cIumqA" name="addTransaction" visibility="public">
+        <ownedParameter xmi:id="_RArvCBO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvCRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvChO-EeaaXfR7cIumqA" name="d" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvCxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvDBO-EeaaXfR7cIumqA" name="servId" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvDRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvDhO-EeaaXfR7cIumqA" name="pName" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvDxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvEBO-EeaaXfR7cIumqA" name="amnt" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDoubleObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvERO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvEhO-EeaaXfR7cIumqA" name="accNr" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvExO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvFBO-EeaaXfR7cIumqA" name="getServices" visibility="public">
+        <ownedParameter xmi:id="_RArvFRO-EeaaXfR7cIumqA" type="_RArvHxO-EeaaXfR7cIumqA" direction="return">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvFhO-EeaaXfR7cIumqA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvFxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvGBO-EeaaXfR7cIumqA" name="ProgramPartner">
+      <ownedAttribute xmi:id="_RArvGRO-EeaaXfR7cIumqA" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvGhO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvGxO-EeaaXfR7cIumqA" name="numberOfCustomers" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvHBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvHRO-EeaaXfR7cIumqA" name="programs" type="_RArIWRO-EeaaXfR7cIumqA" association="_RAsV-hO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvHhO-EeaaXfR7cIumqA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvHxO-EeaaXfR7cIumqA" name="Service">
+      <ownedAttribute xmi:id="_RArvIBO-EeaaXfR7cIumqA" name="serviceNr" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvIRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvIhO-EeaaXfR7cIumqA" name="description" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvIxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvJBO-EeaaXfR7cIumqA" name="pointsEarned" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvJRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvJhO-EeaaXfR7cIumqA" name="condition" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvJxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvKBO-EeaaXfR7cIumqA" name="pointsBurned" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvKRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvKhO-EeaaXfR7cIumqA" name="partner" type="_RArvGBO-EeaaXfR7cIumqA" isOrdered="true" association="_RArvPBO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvKxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvLBO-EeaaXfR7cIumqA" name="transactions" type="_RArvPRO-EeaaXfR7cIumqA" association="_RAsV-BO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvLRO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvLhO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvLxO-EeaaXfR7cIumqA" name="level" type="_RArIThO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV-RO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvMBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvMRO-EeaaXfR7cIumqA" name="deliveredServices" type="_RArvHxO-EeaaXfR7cIumqA" association="_RArvPBO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvMhO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvMxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArvNBO-EeaaXfR7cIumqA" name="calcPoints" visibility="public">
+        <ownedParameter xmi:id="_RArvNRO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvNhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvNxO-EeaaXfR7cIumqA" name="upgradePointsEarned" visibility="public">
+        <ownedParameter xmi:id="_RArvOBO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvORO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvOhO-EeaaXfR7cIumqA" name="amount" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvOxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvPBO-EeaaXfR7cIumqA" memberEnd="_RArvKhO-EeaaXfR7cIumqA _RArvMRO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvPRO-EeaaXfR7cIumqA" name="Transaction" isAbstract="true">
+      <ownedAttribute xmi:id="_RArvPhO-EeaaXfR7cIumqA" name="amount" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvPxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvQBO-EeaaXfR7cIumqA" name="points" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvQRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvQhO-EeaaXfR7cIumqA" name="date" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true" aggregation="composite" association="_RArvbBO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvQxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvRBO-EeaaXfR7cIumqA" name="account" type="_RArvbhO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV9xO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvRRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvRhO-EeaaXfR7cIumqA" name="card" type="_RArvmRO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8RO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvRxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvSBO-EeaaXfR7cIumqA" name="generatedBy" type="_RArvHxO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV-BO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvSRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArvShO-EeaaXfR7cIumqA" name="program" visibility="public">
+        <ownedParameter xmi:id="_RArvSxO-EeaaXfR7cIumqA" type="_RArIWRO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvTBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvTRO-EeaaXfR7cIumqA" name="Date">
+      <ownedAttribute xmi:id="_RArvThO-EeaaXfR7cIumqA" name="year" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvTxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvUBO-EeaaXfR7cIumqA" name="month" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvURO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvUhO-EeaaXfR7cIumqA" name="day" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvUxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArvVBO-EeaaXfR7cIumqA" name="isBefore" visibility="public">
+        <ownedParameter xmi:id="_RArvVRO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvVhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvVxO-EeaaXfR7cIumqA" name="t" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvWBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvWRO-EeaaXfR7cIumqA" name="isEqual" visibility="public">
+        <ownedParameter xmi:id="_RArvWhO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvWxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvXBO-EeaaXfR7cIumqA" name="t" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvXRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvXhO-EeaaXfR7cIumqA" name="fromYMD" visibility="public">
+        <ownedParameter xmi:id="_RArvXxO-EeaaXfR7cIumqA" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvYBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvYRO-EeaaXfR7cIumqA" name="m" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvYhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvYxO-EeaaXfR7cIumqA" name="k" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvZBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvZRO-EeaaXfR7cIumqA" name="y" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvZhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvZxO-EeaaXfR7cIumqA" name="isAfter" visibility="public">
+        <ownedParameter xmi:id="_RArvaBO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvaRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvahO-EeaaXfR7cIumqA" name="t" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvaxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvbBO-EeaaXfR7cIumqA" memberEnd="_RArvQhO-EeaaXfR7cIumqA _RArvbRO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArvbRO-EeaaXfR7cIumqA" type="_RArvPRO-EeaaXfR7cIumqA" association="_RArvbBO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvbhO-EeaaXfR7cIumqA" name="LoyaltyAccount">
+      <ownedAttribute xmi:id="_RArvbxO-EeaaXfR7cIumqA" name="points" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvcBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvcRO-EeaaXfR7cIumqA" name="totalPointsEarned" visibility="public" isOrdered="true" isReadOnly="true" isDerived="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvchO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvcxO-EeaaXfR7cIumqA" name="number" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvdBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvdRO-EeaaXfR7cIumqA" name="usedServices" type="_RArvHxO-EeaaXfR7cIumqA" isReadOnly="true" isDerived="true" association="_RArvjRO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvdhO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvdxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArveBO-EeaaXfR7cIumqA" name="Membership" type="_RArvjxO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8hO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArveRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvehO-EeaaXfR7cIumqA" name="transactions" type="_RArvPRO-EeaaXfR7cIumqA" association="_RAsV9xO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvexO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvfBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArvfRO-EeaaXfR7cIumqA" name="earn" visibility="public">
+        <ownedParameter xmi:id="_RArvfhO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvfxO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvgBO-EeaaXfR7cIumqA" name="i" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvgRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvghO-EeaaXfR7cIumqA" name="burn" visibility="public">
+        <ownedParameter xmi:id="_RArvgxO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvhBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvhRO-EeaaXfR7cIumqA" name="i" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvhhO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvhxO-EeaaXfR7cIumqA" name="getCustomerName" visibility="public">
+        <ownedParameter xmi:id="_RArviBO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArviRO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArvihO-EeaaXfR7cIumqA" name="isEmpty" visibility="public">
+        <ownedParameter xmi:id="_RArvixO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvjBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvjRO-EeaaXfR7cIumqA" memberEnd="_RArvdRO-EeaaXfR7cIumqA _RArvjhO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArvjhO-EeaaXfR7cIumqA" type="_RArvbhO-EeaaXfR7cIumqA" association="_RArvjRO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvjxO-EeaaXfR7cIumqA" name="Membership">
+      <ownedAttribute xmi:id="_RArvkBO-EeaaXfR7cIumqA" name="currentLevel" type="_RArIThO-EeaaXfR7cIumqA" isOrdered="true" association="_RArvmBO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvkRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvkhO-EeaaXfR7cIumqA" name="card" type="_RArvmRO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8BO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvkxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvlBO-EeaaXfR7cIumqA" name="account" type="_RArvbhO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8hO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvlRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvlhO-EeaaXfR7cIumqA" name="programs" type="_RArIWRO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8xO-EeaaXfR7cIumqA"/>
+      <ownedAttribute xmi:id="_RArvlxO-EeaaXfR7cIumqA" name="participants" type="_RArvuxO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV9RO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvmBO-EeaaXfR7cIumqA" memberEnd="_RArIUxO-EeaaXfR7cIumqA _RArvkBO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvmRO-EeaaXfR7cIumqA" name="CustomerCard">
+      <ownedAttribute xmi:id="_RArvmhO-EeaaXfR7cIumqA" name="valid" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvmxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvnBO-EeaaXfR7cIumqA" name="color" visibility="public" type="_RArISxO-EeaaXfR7cIumqA" isOrdered="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvnRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvnhO-EeaaXfR7cIumqA" name="printedName" visibility="public" isOrdered="true" isReadOnly="true" isDerived="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvnxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvoBO-EeaaXfR7cIumqA" name="goodThru" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true" aggregation="composite" association="_RArvtRO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvoRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvohO-EeaaXfR7cIumqA" name="validFrom" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true" aggregation="composite" association="_RArvtxO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvoxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvpBO-EeaaXfR7cIumqA" name="myLevel" type="_RArIThO-EeaaXfR7cIumqA" isOrdered="true" isReadOnly="true" isDerived="true" aggregation="composite" association="_RArvuRO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvpRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvphO-EeaaXfR7cIumqA" name="owner" type="_RArvuxO-EeaaXfR7cIumqA" isOrdered="true" association="_RArv3RO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvpxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvqBO-EeaaXfR7cIumqA" name="Membership" type="_RArvjxO-EeaaXfR7cIumqA" isOrdered="true" association="_RAsV8BO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvqRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvqhO-EeaaXfR7cIumqA" name="transactions" type="_RArvPRO-EeaaXfR7cIumqA" association="_RAsV8RO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvqxO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvrBO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArvrRO-EeaaXfR7cIumqA" name="getTransactions" visibility="public">
+        <ownedParameter xmi:id="_RArvrhO-EeaaXfR7cIumqA" type="_RArvPRO-EeaaXfR7cIumqA" direction="return">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvrxO-EeaaXfR7cIumqA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvsBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvsRO-EeaaXfR7cIumqA" name="until" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvshO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RArvsxO-EeaaXfR7cIumqA" name="from" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvtBO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvtRO-EeaaXfR7cIumqA" memberEnd="_RArvoBO-EeaaXfR7cIumqA _RArvthO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArvthO-EeaaXfR7cIumqA" type="_RArvmRO-EeaaXfR7cIumqA" association="_RArvtRO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvtxO-EeaaXfR7cIumqA" memberEnd="_RArvohO-EeaaXfR7cIumqA _RArvuBO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArvuBO-EeaaXfR7cIumqA" type="_RArvmRO-EeaaXfR7cIumqA" association="_RArvtxO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArvuRO-EeaaXfR7cIumqA" memberEnd="_RArvpBO-EeaaXfR7cIumqA _RArvuhO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArvuhO-EeaaXfR7cIumqA" type="_RArvmRO-EeaaXfR7cIumqA" association="_RArvuRO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RArvuxO-EeaaXfR7cIumqA" name="Customer">
+      <ownedAttribute xmi:id="_RArvvBO-EeaaXfR7cIumqA" name="gender" visibility="public" type="_RArv1xO-EeaaXfR7cIumqA" isOrdered="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvvRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvvhO-EeaaXfR7cIumqA" name="isMale" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvvxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvwBO-EeaaXfR7cIumqA" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvwRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvwhO-EeaaXfR7cIumqA" name="title" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvwxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvxBO-EeaaXfR7cIumqA" name="age" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvxRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvxhO-EeaaXfR7cIumqA" name="dateOfBirth" type="_RArvTRO-EeaaXfR7cIumqA" isOrdered="true" aggregation="composite" association="_RArv2hO-EeaaXfR7cIumqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvxxO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvyBO-EeaaXfR7cIumqA" name="programs" type="_RArIWRO-EeaaXfR7cIumqA" association="_RArv3BO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvyRO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvyhO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvyxO-EeaaXfR7cIumqA" name="cards" type="_RArvmRO-EeaaXfR7cIumqA" association="_RArv3RO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvzBO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArvzRO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RArvzhO-EeaaXfR7cIumqA" name="memberships" type="_RArvjxO-EeaaXfR7cIumqA" isOrdered="true" association="_RArv3hO-EeaaXfR7cIumqA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RArvzxO-EeaaXfR7cIumqA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArv0BO-EeaaXfR7cIumqA"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_RArv0RO-EeaaXfR7cIumqA" name="birthdayHappens" visibility="public">
+        <ownedParameter xmi:id="_RArv0hO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArv0xO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RArv1BO-EeaaXfR7cIumqA" name="age" visibility="public">
+        <ownedParameter xmi:id="_RArv1RO-EeaaXfR7cIumqA" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RArv1hO-EeaaXfR7cIumqA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_RArv1xO-EeaaXfR7cIumqA" name="Gender">
+      <ownedLiteral xmi:id="_RArv2BO-EeaaXfR7cIumqA" name="male"/>
+      <ownedLiteral xmi:id="_RArv2RO-EeaaXfR7cIumqA" name="female"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArv2hO-EeaaXfR7cIumqA" memberEnd="_RArvxhO-EeaaXfR7cIumqA _RArv2xO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArv2xO-EeaaXfR7cIumqA" type="_RArvuxO-EeaaXfR7cIumqA" association="_RArv2hO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArv3BO-EeaaXfR7cIumqA" memberEnd="_RArIWhO-EeaaXfR7cIumqA _RArvyBO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArv3RO-EeaaXfR7cIumqA" memberEnd="_RArvyxO-EeaaXfR7cIumqA _RArvphO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RArv3hO-EeaaXfR7cIumqA" memberEnd="_RArvzhO-EeaaXfR7cIumqA _RArv3xO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RArv3xO-EeaaXfR7cIumqA" type="_RArvuxO-EeaaXfR7cIumqA" association="_RArv3hO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV8BO-EeaaXfR7cIumqA" memberEnd="_RArvqBO-EeaaXfR7cIumqA _RArvkhO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV8RO-EeaaXfR7cIumqA" memberEnd="_RArvRhO-EeaaXfR7cIumqA _RArvqhO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV8hO-EeaaXfR7cIumqA" memberEnd="_RArvlBO-EeaaXfR7cIumqA _RArveBO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV8xO-EeaaXfR7cIumqA" memberEnd="_RArvlhO-EeaaXfR7cIumqA _RAsV9BO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RAsV9BO-EeaaXfR7cIumqA" type="_RArvjxO-EeaaXfR7cIumqA" association="_RAsV8xO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV9RO-EeaaXfR7cIumqA" memberEnd="_RArvlxO-EeaaXfR7cIumqA _RAsV9hO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RAsV9hO-EeaaXfR7cIumqA" type="_RArvjxO-EeaaXfR7cIumqA" association="_RAsV9RO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV9xO-EeaaXfR7cIumqA" memberEnd="_RArvehO-EeaaXfR7cIumqA _RArvRBO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV-BO-EeaaXfR7cIumqA" memberEnd="_RArvSBO-EeaaXfR7cIumqA _RArvLBO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV-RO-EeaaXfR7cIumqA" memberEnd="_RArIVhO-EeaaXfR7cIumqA _RArvLxO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV-hO-EeaaXfR7cIumqA" memberEnd="_RArIXRO-EeaaXfR7cIumqA _RArvHRO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV-xO-EeaaXfR7cIumqA" memberEnd="_RAru4RO-EeaaXfR7cIumqA _RArIURO-EeaaXfR7cIumqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RAsV_BO-EeaaXfR7cIumqA" memberEnd="_RAru4xO-EeaaXfR7cIumqA _RAsV_RO-EeaaXfR7cIumqA">
+      <ownedEnd xmi:id="_RAsV_RO-EeaaXfR7cIumqA" type="_RArIWRO-EeaaXfR7cIumqA" association="_RAsV_BO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RAsV_hO-EeaaXfR7cIumqA" name="Earning">
+      <generalization xmi:id="_RAsV_xO-EeaaXfR7cIumqA" general="_RArvPRO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RAsWABO-EeaaXfR7cIumqA" name="Burning">
+      <generalization xmi:id="_RAsWARO-EeaaXfR7cIumqA" general="_RArvPRO-EeaaXfR7cIumqA"/>
+    </packagedElement>
+    <profileApplication xmi:id="_RAsWAhO-EeaaXfR7cIumqA">
+      <eAnnotations xmi:id="_RAsWAxO-EeaaXfR7cIumqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_RAsWBBO-EeaaXfR7cIumqA">
+      <eAnnotations xmi:id="_RAsWBRO-EeaaXfR7cIumqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Ecore:EParameter xmi:id="_RAsWBhO-EeaaXfR7cIumqA" base_Parameter="_RAru6hO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWBxO-EeaaXfR7cIumqA" base_Parameter="_RAru7xO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWCBO-EeaaXfR7cIumqA" base_Parameter="_RAru8RO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWCRO-EeaaXfR7cIumqA" base_Parameter="_RAru8xO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWChO-EeaaXfR7cIumqA" base_Parameter="_RAru-RO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWCxO-EeaaXfR7cIumqA" base_Parameter="_RAru_hO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWDBO-EeaaXfR7cIumqA" base_Parameter="_RArvABO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWDRO-EeaaXfR7cIumqA" base_Parameter="_RArvBRO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWDhO-EeaaXfR7cIumqA" base_Parameter="_RArvChO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWDxO-EeaaXfR7cIumqA" base_Parameter="_RArvDBO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWEBO-EeaaXfR7cIumqA" base_Parameter="_RArvDhO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWERO-EeaaXfR7cIumqA" base_Parameter="_RArvEBO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWEhO-EeaaXfR7cIumqA" base_Parameter="_RArvEhO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWExO-EeaaXfR7cIumqA" base_Parameter="_RArvOhO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWFBO-EeaaXfR7cIumqA" base_Parameter="_RArvVxO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWFRO-EeaaXfR7cIumqA" base_Parameter="_RArvXBO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWFhO-EeaaXfR7cIumqA" base_Parameter="_RArvYRO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWFxO-EeaaXfR7cIumqA" base_Parameter="_RArvYxO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWGBO-EeaaXfR7cIumqA" base_Parameter="_RArvZRO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWGRO-EeaaXfR7cIumqA" base_Parameter="_RArvahO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWGhO-EeaaXfR7cIumqA" base_Parameter="_RArvgBO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWGxO-EeaaXfR7cIumqA" base_Parameter="_RArvhRO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWHBO-EeaaXfR7cIumqA" base_Parameter="_RArvsRO-EeaaXfR7cIumqA"/>
+  <Ecore:EParameter xmi:id="_RAsWHRO-EeaaXfR7cIumqA" base_Parameter="_RArvsxO-EeaaXfR7cIumqA"/>
+</xmi:XMI>
